@@ -411,7 +411,8 @@ static const Rule rules[] = {
 #if PERTAG_PATCH
 static const MonitorRule monrules[] = {
 	/* monitor  tag   layout  mfact  nmaster  showbar  topbar */
-	{  1,       -1,   2,      -1,    -1,      -1,      -1     }, // use a different layout for the second monitor
+	{  1,       -1,   0,      -1,    -1,      -1,      -1     }, // use a different layout for the second monitor
+	{  -1,       4,   3,      -1,     2,      -1,      -1     }, // tag 4 starts with layout 3 and 2 master windows
 	{  -1,      -1,   0,      -1,    -1,      -1,      -1     }, // default
 };
 #else
@@ -885,6 +886,8 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_r,          self_restart,           {0} },
 	#endif // SELFRESTART_PATCH
 	{ MODKEY|ShiftMask,             XK_q,          spawn,                  SHCMD("exec shutdownchoice")},
+	{ MODKEY,                       XK_Page_Up,    spawn,                  SHCMD("pamixer --allow-boost -i 5")},
+	{ MODKEY,                       XK_Page_Down,  spawn,                  SHCMD("pamixer --allow-boost -d 5")},
 	#if RESTARTSIG_PATCH
 	{ MODKEY|ControlMask|ShiftMask, XK_q,          quit,                   {1} },
 	#endif // RESTARTSIG_PATCH
@@ -917,8 +920,8 @@ static Key keys[] = {
 	{ MODKEY|Mod5Mask|Mod1Mask,     XK_Tab,        rotatelayoutaxis,       {.i = -4 } },   /* flextile, 4 = secondary stack axis */
 	{ MODKEY|ControlMask,           XK_Return,     mirrorlayout,           {0} },          /* flextile, flip master and stack areas */
 	#endif // FLEXTILE_DELUXE_LAYOUT
-	{ MODKEY,                       XK_space,      setlayout,              {0} },
-	{ MODKEY|ShiftMask,             XK_space,      togglefloating,         {0} },
+	//{ MODKEY,                       XK_space,      setlayout,              {0} },
+	{ MODKEY,                       XK_space,      togglefloating,         {0} },
 	#if MAXIMIZE_PATCH
 	{ MODKEY|ControlMask|ShiftMask, XK_h,          togglehorizontalmax,    {0} },
 	{ MODKEY|ControlMask|ShiftMask, XK_l,          togglehorizontalmax,    {0} },
@@ -1105,9 +1108,9 @@ static Key keys[] = {
 	{ MODKEY|ControlMask,           XK_period,     cyclelayout,            {.i = +1 } },
 	#endif // CYCLELAYOUTS_PATCH
 	#if MPDCONTROL_PATCH
-	{ MODKEY,                       XK_F1,         mpdchange,              {.i = -1} },
-	{ MODKEY,                       XK_F2,         mpdchange,              {.i = +1} },
-	{ MODKEY,                       XK_Escape,     mpdcontrol,             {0} },
+	{ MODKEY,                       XK_Home,         mpdchange,              {.i = -1} },
+	{ MODKEY,                       XK_End,         mpdchange,              {.i = +1} },
+	{ MODKEY,                       XK_Insert,     mpdcontrol,             {0} },
 	#endif // MPDCONTROL_PATCH
 	TAGKEYS(                        XK_1,                                  0)
 	TAGKEYS(                        XK_2,                                  1)

@@ -625,7 +625,7 @@
  *    - libmpdclient
  * https://dwm.suckless.org/patches/mpdcontrol/
  */
-#define MPDCONTROL_PATCH 0
+#define MPDCONTROL_PATCH 1
 
 /* Adds rules per monitor, e.g. have default layouts per monitor.
  * The use case for this is if the second monitor is vertical (i.e. rotated) then
@@ -633,7 +633,7 @@
  * used for the main monitor. E.g. normal vertical split for main monitor and
  * horizontal split for the second.
  */
-#define MONITOR_RULES_PATCH 0
+#define MONITOR_RULES_PATCH 1
 
 /* Always display the the monocle-symbol as defined in config.h if the monocle-layout
  * is activated. Do not display the number of open clients in the current tag.
