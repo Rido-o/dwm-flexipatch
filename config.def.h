@@ -95,9 +95,9 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 #if BAR_PANGO_PATCH
 static const char font[]                 = "monospace 10";
 #else
-static const char *fonts[]               = { "cozette:pixelsize=12" };
+static const char *fonts[]               = { "cozette:pixelsize=11" };
 #endif // BAR_PANGO_PATCH
-static const char dmenufont[]            = "cozette:pixelsize=12";
+static const char dmenufont[]            = "cozette:pixelsize=11";
 
 #if BAR_FLEXWINTITLE_PATCH
 static char c000000[]                    = "#000000"; // placeholder value
@@ -765,6 +765,7 @@ static Key keys[] = {
 	#endif // KEYMODES_PATCH
 	{ MODKEY,                       XK_o,          spawn,                  {.v = dmenucmd } },
 	{ MODKEY,                       XK_p,          spawn,                  SHCMD("exec program-launcher") },
+	{ MODKEY,                       XK_t,          spawn,                  SHCMD("exec select-theme") },
 	{ MODKEY,                       XK_w,          spawn,                  SHCMD("$TERMINAL nvim -c ':VimwikiIndex'") },
 	{ MODKEY,                       XK_Return,     spawn,                  {.v = termcmd } },
 	#if RIODRAW_PATCH
@@ -906,7 +907,7 @@ static Key keys[] = {
 	#if XRDB_PATCH && !BAR_VTCOLORS_PATCH
 	{ MODKEY|ShiftMask,             XK_F5,         xrdb,                   {.v = NULL } },
 	#endif // XRDB_PATCH
-	{ MODKEY,                       XK_t,          setlayout,              {.v = &layouts[0]} },
+	{ MODKEY,                       XK_F1,          setlayout,              {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,          setlayout,              {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,          setlayout,              {.v = &layouts[2]} },
 	#if COLUMNS_LAYOUT
