@@ -767,6 +767,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_p,          spawn,                  SHCMD("exec program-launcher") },
 	{ MODKEY,                       XK_t,          spawn,                  SHCMD("exec select-theme") },
 	{ MODKEY,                       XK_w,          spawn,                  SHCMD("$TERMINAL nvim -c ':VimwikiIndex'") },
+	{ MODKEY,                       XK_n,          spawn,                  SHCMD("$TERMINAL nnn -e -D") },
 	{ MODKEY,                       XK_Return,     spawn,                  {.v = termcmd } },
 	#if RIODRAW_PATCH
 	{ MODKEY|ControlMask,           XK_p,          riospawnsync,           {.v = dmenucmd } },
