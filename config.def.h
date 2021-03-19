@@ -643,6 +643,7 @@ static const Layout layouts[] = {
 
 /* key definitions */
 #define MODKEY Mod4Mask
+#define PrintScreenDWM 0x0000ff61
 #if COMBO_PATCH && SWAPTAGS_PATCH && TAGOTHERMONITOR_PATCH
 #define TAGKEYS(KEY,TAG) \
 	{ MODKEY,                       KEY,      comboview,      {.ui = 1 << TAG} }, \
@@ -768,6 +769,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_t,          spawn,                  SHCMD("exec select-theme") },
 	{ MODKEY,                       XK_w,          spawn,                  SHCMD("$TERMINAL nvim -c ':VimwikiIndex'") },
 	{ MODKEY,                       XK_n,          spawn,                  SHCMD("$TERMINAL nnn -e -D") },
+	{ MODKEY,                       PrintScreenDWM,spawn,                  SHCMD("import -window root \"$HOME/Images/Screenshots/$(date '+%Y-%m-%d %X').png\"") },
 	{ MODKEY,                       XK_Return,     spawn,                  {.v = termcmd } },
 	#if RIODRAW_PATCH
 	{ MODKEY|ControlMask,           XK_p,          riospawnsync,           {.v = dmenucmd } },
