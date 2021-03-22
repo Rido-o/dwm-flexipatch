@@ -65,7 +65,7 @@ static const int horizpadbar             = 10;   /* horizontal padding for statu
 static const int vertpadbar              = 10;   /* vertical padding for statusbar */
 #endif // BAR_STATUSPADDING_PATCH
 #if BAR_STATUSBUTTON_PATCH
-static const char buttonbar[]            = "<O>";
+static const char buttonbar[]            = "☸";
 #endif // BAR_STATUSBUTTON_PATCH
 #if BAR_SYSTRAY_PATCH
 static const unsigned int systrayspacing = 2;   /* systray spacing */
@@ -1166,7 +1166,8 @@ static Command commands[] = {
 static Button buttons[] = {
 	/* click                event mask           button          function        argument */
 	#if BAR_STATUSBUTTON_PATCH
-	{ ClkButton,            0,                   Button1,        spawn,          {.v = dmenucmd } },
+	{ ClkButton,            0,                   Button1,        spawn,          SHCMD("exec program-launcher") },
+	{ ClkButton,            0,                   Button3,        spawn,          SHCMD("exec shutdownchoice") },
 	#endif // BAR_STATUSBUTTON_PATCH
 	{ ClkLtSymbol,          0,                   Button1,        cyclelayout,    {.i = +1} },
 	#if BAR_LAYOUTMENU_PATCH
