@@ -1165,6 +1165,7 @@ static Command commands[] = {
 #endif //
 static Button buttons[] = {
 	/* click                event mask           button          function        argument */
+	{ ClkRootWin,           0,                   Button3,        spawn,          SHCMD("exec right-menu") },
 	#if BAR_STATUSBUTTON_PATCH
 	{ ClkButton,            0,                   Button1,        spawn,          SHCMD("exec program-launcher") },
 	{ ClkButton,            0,                   Button3,        spawn,          SHCMD("exec shutdownchoice") },
