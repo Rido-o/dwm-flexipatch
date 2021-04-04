@@ -93,7 +93,7 @@ static void (*bartabmonfns[])(Monitor *) = { NULL /* , customlayoutfn */ };
 #endif // MONOCLE_LAYOUT
 #endif // BAR_TABGROUPS_PATCH
 #if BAR_PANGO_PATCH
-static const char font[]                 = "monospace 10";
+static const char font[]                 = "cozette:pixelsize=11";
 #else
 static const char *fonts[]               = { "cozette:pixelsize=11" };
 #endif // BAR_PANGO_PATCH
@@ -770,6 +770,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_t,          spawn,                  SHCMD("exec select-theme") },
 	{ MODKEY,                       XK_w,          spawn,                  SHCMD("$TERMINAL nvim -c ':VimwikiIndex'") },
 	{ MODKEY,                       XK_n,          spawn,                  SHCMD("$TERMINAL nnn -e -D") },
+	{ MODKEY|ShiftMask,             XK_slash,      spawn,                  SHCMD("$TERMINAL $EDITOR $HOME/.cfg/install/keybindings.md") },
 	{ MODKEY,                       PrintScreenDWM,spawn,                  SHCMD("import -window root \"$HOME/Images/Screenshots/$(date '+%Y-%m-%d %X').png\"") },
 	{ MODKEY,                       XK_Return,     spawn,                  {.v = termcmd } },
 	#if RIODRAW_PATCH
