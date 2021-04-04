@@ -771,7 +771,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_t,          spawn,                  SHCMD("exec select-theme") },
 	{ MODKEY,                       XK_w,          spawn,                  SHCMD("$TERMINAL nvim -c ':VimwikiIndex'") },
 	{ MODKEY,                       XK_n,          spawn,                  SHCMD("$TERMINAL nnn -e -D") },
-	{ MODKEY|ShiftMask,             XK_slash,      spawn,                  SHCMD("$TERMINAL -n floatcenter -g 120x34 $EDITOR $HOME/.cfg/install/keybindings.md") },
+	{ MODKEY|ShiftMask,             XK_slash,      spawn,                  SHCMD("$TERMINAL -n floatcenter -g 120x50 $EDITOR $HOME/.cfg/install/keybindings.md") },
 	{ MODKEY,                       PrintScreenDWM,spawn,                  SHCMD("import -window root \"$HOME/Images/Screenshots/$(date '+%Y-%m-%d %X').png\"") },
 	{ MODKEY,                       XK_Return,     spawn,                  {.v = termcmd } },
 	#if RIODRAW_PATCH
