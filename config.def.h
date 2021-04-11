@@ -306,7 +306,7 @@ static char *statuscolors[][ColCount] = {
 #endif // BAR_POWERLINE_STATUS_PATCH
 
 #if BAR_LAYOUTMENU_PATCH
-static const char *layoutmenu_cmd = "layoutmenu.sh";
+static const char *layoutmenu_cmd = "layoutmenu";
 #endif
 
 #if COOL_AUTOSTART_PATCH
