@@ -83,6 +83,9 @@
 #if BAR_LAYOUTMENU_PATCH
 #include "bar_layoutmenu.h"
 #endif
+#if BAR_TITLEMENU_PATCH
+#include "bar_titlemenu.h"
+#endif
 
 /* Other patches */
 #if ASPECTRESIZE_PATCH

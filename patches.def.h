@@ -51,6 +51,9 @@
  */
 #define BAR_LAYOUTMENU_PATCH 1
 
+/* My own handmade patch*/
+#define BAR_TITLEMENU_PATCH 1
+
 /* Show layout symbol in bar */
 #define BAR_LTSYMBOL_PATCH 1
 

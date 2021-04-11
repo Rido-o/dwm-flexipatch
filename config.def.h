@@ -309,6 +309,10 @@ static char *statuscolors[][ColCount] = {
 static const char *layoutmenu_cmd = "layoutmenu";
 #endif
 
+#if BAR_TITLEMENU_PATCH
+static const char *titlemenu_cmd = "titlemenu";
+#endif
+
 #if COOL_AUTOSTART_PATCH
 static const char *const autostart[] = {
 	"st", NULL,
@@ -1178,6 +1182,9 @@ static Button buttons[] = {
 	#if BAR_LAYOUTMENU_PATCH
 	{ ClkLtSymbol,          0,                   Button3,        layoutmenu,     {0} },
 	#endif // BAR_LAYOUTMENU_PATCH
+	#if BAR_TITLEMENU_PATCH
+	{ ClkWinTitle,          0,                   Button3,        titlemenu,		 {0} },
+	#endif // BAR_TITLEMENU_PATCH
 	#if BAR_WINTITLEACTIONS_PATCH
 	{ ClkWinTitle,          0,                   Button1,        togglewin,      {0} },
 	{ ClkWinTitle,          0,                   Button3,        showhideclient, {0} },
