@@ -1173,8 +1173,9 @@ static Command commands[] = {
 static Button buttons[] = {
 	/* click                event mask           button          function        argument */
 	{ ClkRootWin,           0,                   Button3,        spawn,          SHCMD("exec right-menu") },
+	{ ClkWinTitle,          0,                   Button1,        spawn,          SHCMD("exec right-menu") },
 	#if BAR_STATUSBUTTON_PATCH
-	{ ClkButton,            0,                   Button1,        spawn,          SHCMD("exec program-launcher") },
+	{ ClkButton,            0,                   Button1,        spawn,          SHCMD("exec right-menu") },
 	{ ClkButton,            0,                   Button3,        spawn,          SHCMD("exec shutdownchoice") },
 	#endif // BAR_STATUSBUTTON_PATCH
 	{ ClkLtSymbol,          0,                   Button4,        cyclelayout,    {.i = +1} },
