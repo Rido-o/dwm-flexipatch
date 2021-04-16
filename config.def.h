@@ -1181,7 +1181,7 @@ static Button buttons[] = {
 	{ ClkLtSymbol,          0,                   Button4,        cyclelayout,    {.i = +1} },
 	{ ClkLtSymbol,          0,                   Button5,        cyclelayout,    {.i = -1} },
 	#if BAR_LAYOUTMENU_PATCH
-	{ ClkLtSymbol,          0,                   Button3,        layoutmenu,     {0} },
+	{ ClkLtSymbol,          0,                   Button1,        layoutmenu,     {0} },
 	#endif // BAR_LAYOUTMENU_PATCH
 	#if BAR_TITLEMENU_PATCH
 	{ ClkWinTitle,          0,                   Button3,        titlemenu,		 {0} },
