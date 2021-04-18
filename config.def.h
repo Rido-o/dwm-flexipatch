@@ -22,10 +22,10 @@ static const unsigned int gappov         = 10;  /* vert outer gap between window
 static const int smartgaps               = 0;   /* 1 means no outer gap when there is only one window */
 #endif // VANITYGAPS_PATCH
 #if AUTOSTART_PATCH
-static const char autostartblocksh[]     = "autostart_blocking";
-static const char autostartsh[]          = "autostart";
-static const char dwmdir[]               = "dwm";
-static const char localshare[]           = ".local/share";
+static const char autostartblocksh[]     = "dwm-autostart_blocking";
+static const char autostartsh[]          = "dwm-autostart";
+static const char dwmdir[]               = "scripts";
+static const char localshare[]           = ".local/bin";
 #endif // AUTOSTART_PATCH
 #if BAR_ANYBAR_PATCH
 static const int usealtbar               = 1;        /* 1 means use non-dwm status bar */

@@ -3,7 +3,6 @@ runautostart(void)
 {
 	char *pathpfx;
 	char *path;
-	char *xdgdatahome;
 	char *home;
 
 	if ((home = getenv("HOME")) == NULL)
@@ -13,24 +12,13 @@ runautostart(void)
 	/* if $XDG_DATA_HOME is defined, use $XDG_DATA_HOME/dwm,
 	 * otherwise use ~/.local/share/dwm as autostart script directory
 	 */
-	if ((xdgdatahome = getenv("XDG_DATA_HOME")) != NULL) {
-		/* space for path segments, separators and nul */
-		if ((pathpfx = malloc(strlen(xdgdatahome) + strlen(dwmdir) + 2)) == NULL)
-			return;
+	/* space for path segments, separators and nul */
+	if ((pathpfx = malloc(strlen(home) + strlen(localshare) + strlen(dwmdir) + 3)) == NULL)
+		return;
 
-		if (sprintf(pathpfx, "%s/%s", xdgdatahome, dwmdir) <= 0) {
-			free(pathpfx);
-			return;
-		}
-	} else {
-		/* space for path segments, separators and nul */
-		if ((pathpfx = malloc(strlen(home) + strlen(localshare) + strlen(dwmdir) + 3)) == NULL)
-			return;
-
-		if (sprintf(pathpfx, "%s/%s/%s", home, localshare, dwmdir) < 0) {
-			free(pathpfx);
-			return;
-		}
+	if (sprintf(pathpfx, "%s/%s/%s", home, localshare, dwmdir) < 0) {
+		free(pathpfx);
+		return;
 	}
 
 	/* check if the autostart script directory exists */
