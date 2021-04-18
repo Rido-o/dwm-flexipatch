@@ -22,8 +22,8 @@ static const unsigned int gappov         = 10;  /* vert outer gap between window
 static const int smartgaps               = 0;   /* 1 means no outer gap when there is only one window */
 #endif // VANITYGAPS_PATCH
 #if AUTOSTART_PATCH
-static const char autostartblocksh[]     = "autostart_blocking.sh";
-static const char autostartsh[]          = "autostart.sh";
+static const char autostartblocksh[]     = "autostart_blocking";
+static const char autostartsh[]          = "autostart";
 static const char dwmdir[]               = "dwm";
 static const char localshare[]           = ".local/share";
 #endif // AUTOSTART_PATCH
