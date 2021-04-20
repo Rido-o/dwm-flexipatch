@@ -777,7 +777,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_n,          spawn,                  SHCMD("$TERMINAL nnn -e -D") },
 	{ MODKEY|ShiftMask,             XK_slash,      spawn,                  SHCMD("$TERMINAL -n floatcenter -g 120x50 $EDITOR $HOME/.cfg/wiki/help/help.wiki") },
 	{ MODKEY,						XK_m,          spawn,                  SHCMD("$TERMINAL -n floatcenter -g 100x50 ncmpcpp -c $HOME/.config/ncmpcpp/config-play") },
-	{ MODKEY,                       PrintScreenDWM,spawn,                  SHCMD("import -window root \"$HOME/Images/Screenshots/$(date '+%Y-%m-%d %X').png\"") },
+	{ MODKEY,                       PrintScreenDWM,spawn,                  SHCMD("exec screenshot-desktop") },
 	{ MODKEY,                       XK_Return,     spawn,                  {.v = termcmd } },
 	#if RIODRAW_PATCH
 	{ MODKEY|ControlMask,           XK_p,          riospawnsync,           {.v = dmenucmd } },
