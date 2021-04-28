@@ -24,8 +24,8 @@ static const int smartgaps               = 0;   /* 1 means no outer gap when the
 #if AUTOSTART_PATCH
 static const char autostartblocksh[]     = "dwm-autostart_blocking";
 static const char autostartsh[]          = "dwm-autostart";
-static const char dwmdir[]               = "scripts";
-static const char localshare[]           = ".local/bin/dwm";
+static const char dwmdir[]               = "dwm";
+static const char localshare[]           = ".local/bin";
 #endif // AUTOSTART_PATCH
 #if BAR_ANYBAR_PATCH
 static const int usealtbar               = 1;        /* 1 means use non-dwm status bar */
